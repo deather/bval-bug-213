@@ -1,0 +1,17 @@
+plugins {
+	id 'java'
+	id 'war'
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+	implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+	implementation group: 'javax.ws.rs', name: 'javax.ws.rs-api', version: '2.1.1'
+
+	providedCompile group: 'javax', name: 'javaee-api', version: '8.0'
+	providedCompile group: 'org.apache.tomee', name: 'apache-tomee', version: '8.0.8'
+}
